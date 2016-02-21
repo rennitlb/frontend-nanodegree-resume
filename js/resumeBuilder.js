@@ -20,18 +20,23 @@ var bio = {
 
         var formattedMobile = HTMLmobile.replace('%data%', bio.contacts.mobile);
         $('#topContacts').append(formattedMobile);
+        $('#footerContacts').append(formattedMobile);
 
         var formattedEmail = HTMLemail.replace('%data%', bio.contacts.email);
         $('#topContacts').append(formattedEmail);
+        $('#footerContacts').append(formattedEmail);
 
         var formattedGithub = HTMLgithub.replace('%data%', bio.contacts.github);
         $('#topContacts').append(formattedGithub);
+        $('#footerContacts').append(formattedGithub);
 
         var formattedTwitter = HTMLtwitter.replace('%data%', bio.contacts.twitter);
         $('#topContacts').append(formattedTwitter);
+        $('#footerContacts').append(formattedTwitter);
 
         var formattedLocation = HTMLlocation.replace('%data%', bio.contacts.location);
         $('#topContacts').append(formattedLocation);
+        $('#footerContacts').append(formattedLocation);
 
         var formattedBiopic = HTMLbioPic.replace('%data%', bio.biopic);
         $('#header').append(formattedBiopic);
@@ -53,15 +58,15 @@ var education = {
     "schools": [
         {
             "name": "Beuth Hochschule für Technik",
-            "location": "Berlin, Germany",
+            "location": "Beuth Hochschule Berlin, Berlin,  Germany",
             "degree": "Bachelors",
             "majors": ["Media and Computing"],
             "dates": 2012,
             "url": "" //TODO: add URL
         },
         {
-            "name": "Hochschule für Technik und Wirtschaft",
-            "location": "Berlin, Germany",
+            "name": "Hochschule für Technik und Wirtschaft Berlin",
+            "location": "HTW Berlin, Berlin, Germany",
             "degree": "Masters",
             "majors": ["International Media and Computing"],
             "dates": 2017,
@@ -126,7 +131,7 @@ var work = {
         {
             "employer": "AHAB-Akademie GmbH",
             "title": "",
-            "location": "Berlin, Germany",
+            "location": "AHAB Akademie, Berlin, Germany",
             "dates": "01.02.16",
             "description": ""
         }
@@ -190,3 +195,5 @@ projects.display();
 education.display();
 
 $('#mapDiv').append(googleMap);
+
+$('#main').append(internationalizeButton);
