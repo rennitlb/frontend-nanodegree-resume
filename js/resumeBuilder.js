@@ -46,7 +46,7 @@ var bio = {
 
         $('#header').append(HTMLskillsStart);
 
-        for (skill in bio.skills) {
+        for (var skill in bio.skills) {
             var formattedSkill = HTMLskills.replace('%data%', bio.skills[skill]);
             $('#skills').append(formattedSkill);
         }
@@ -82,7 +82,7 @@ var education = {
         }
     ],
     display: function () {
-        for (school in education.schools) {
+        for (var school in education.schools) {
             $('#education').append(HTMLschoolStart);
 
             var formattedName = HTMLschoolName.replace('%data%', education.schools[school].name);
@@ -98,7 +98,7 @@ var education = {
 
 
             if (education.schools[school].majors.length > 0) {
-                for (major in education.schools[school].majors) {
+                for (var major in education.schools[school].majors) {
                     var formattedMajor = HTMLschoolMajor.replace('%data%', education.schools[school].majors[major]);
                     $('.education-entry:last').append(formattedMajor);
                 }
@@ -108,7 +108,7 @@ var education = {
 
         $('#education').append(HTMLonlineClasses);
 
-        for (onlineCourse in education.onlineCourses) {
+        for (var onlineCourse in education.onlineCourses) {
             $('#education').append(HTMLschoolStart);
 
             var formattedTitle = HTMLonlineTitle.replace('%data%', education.onlineCourses[onlineCourse].title);
@@ -137,7 +137,7 @@ var work = {
         }
     ],
     display: function () {
-        for (job in work.jobs) {
+        for (var job in work.jobs) {
             $('#workExperience').append(HTMLworkStart);
 
             var formattedEmployer = HTMLworkEmployer.replace('%data%', work.jobs[job].employer);
@@ -167,7 +167,7 @@ var projects = {
         }
     ],
     display: function () {
-        for (project in projects.projects) {
+        for (var project in projects.projects) {
             $('#projects').append(HTMLprojectStart);
 
             var formattedTitle = HTMLprojectTitle.replace('%data%', projects.projects[project].title);
@@ -180,7 +180,7 @@ var projects = {
             $('.project-entry:last').append(formattedDescription);
 
             if (projects.projects[project].images.length > 0) {
-                for (image in projects.projects[project].images) {
+                for (var image in projects.projects[project].images) {
                     var formattedImage = HTMLprojectImage.replace('%data%', projects.projects[project].images[image]);
                     $('.project-entry:last').append(formattedImage);
                 }
